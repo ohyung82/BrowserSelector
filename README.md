@@ -1,6 +1,8 @@
 # BrowserSelector
 Browser Selector is a WinForms app written in C# that allows you to associate different urls with different browsers.
 
+# Korean translation version
+
 ## Introduction
 
 This article introduces you to BrowserSelector, an open source app that acts like a bootstrap to associate urls to different browsers installed on your machine,
