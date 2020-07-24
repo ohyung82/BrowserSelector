@@ -34,11 +34,6 @@
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.imlButtons = new System.Windows.Forms.ImageList(this.components);
             this.grdRules = new System.Windows.Forms.DataGridView();
-            this.colSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMatchType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colUrl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBrowserImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colBrowser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblFallback = new System.Windows.Forms.Label();
             this.lblDefaultDesc = new System.Windows.Forms.Label();
             this.chkUseDefault = new System.Windows.Forms.CheckBox();
@@ -50,6 +45,8 @@
             this.unregisterBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.setAsDefaultBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpDefaultsSection = new System.Windows.Forms.GroupBox();
             this.cboDefaultBrowser = new ImageComboBox.ImageComboBox();
             this.imlBrowsers = new System.Windows.Forms.ImageList(this.components);
@@ -60,8 +57,11 @@
             this.btnMoveUp = new System.Windows.Forms.Button();
             this.btnRemoveUrl = new System.Windows.Forms.Button();
             this.btnAddUrl = new System.Windows.Forms.Button();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMatchType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colUrl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBrowserImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colBrowser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdRules)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.grpDefaultsSection.SuspendLayout();
@@ -73,9 +73,9 @@
             this.lblUrl.AutoSize = true;
             this.lblUrl.Location = new System.Drawing.Point(12, 19);
             this.lblUrl.Name = "lblUrl";
-            this.lblUrl.Size = new System.Drawing.Size(20, 13);
+            this.lblUrl.Size = new System.Drawing.Size(26, 13);
             this.lblUrl.TabIndex = 0;
-            this.lblUrl.Text = "Url";
+            this.lblUrl.Text = "URL";
             // 
             // txtUrl
             // 
@@ -119,71 +119,32 @@
             this.grdRules.TabIndex = 6;
             this.grdRules.SelectionChanged += new System.EventHandler(this.grdRules_SelectionChanged);
             // 
-            // colSerial
-            // 
-            this.colSerial.HeaderText = "#";
-            this.colSerial.Name = "colSerial";
-            this.colSerial.ReadOnly = true;
-            this.colSerial.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colSerial.Width = 30;
-            // 
-            // colMatchType
-            // 
-            this.colMatchType.HeaderText = "Match";
-            this.colMatchType.Name = "colMatchType";
-            this.colMatchType.ReadOnly = true;
-            this.colMatchType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colMatchType.Width = 64;
-            // 
-            // colUrl
-            // 
-            this.colUrl.HeaderText = "Url";
-            this.colUrl.Name = "colUrl";
-            this.colUrl.ReadOnly = true;
-            this.colUrl.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colUrl.Width = 360;
-            // 
-            // colBrowserImage
-            // 
-            this.colBrowserImage.HeaderText = "";
-            this.colBrowserImage.Name = "colBrowserImage";
-            this.colBrowserImage.ReadOnly = true;
-            this.colBrowserImage.Width = 24;
-            // 
-            // colBrowser
-            // 
-            this.colBrowser.HeaderText = "Browser";
-            this.colBrowser.Name = "colBrowser";
-            this.colBrowser.ReadOnly = true;
-            this.colBrowser.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colBrowser.Width = 150;
-            // 
             // lblFallback
             // 
             this.lblFallback.AutoSize = true;
             this.lblFallback.Location = new System.Drawing.Point(11, 22);
             this.lblFallback.Name = "lblFallback";
-            this.lblFallback.Size = new System.Drawing.Size(45, 13);
+            this.lblFallback.Size = new System.Drawing.Size(40, 13);
             this.lblFallback.TabIndex = 0;
-            this.lblFallback.Text = "Fallback";
+            this.lblFallback.Text = "대비용";
             // 
             // lblDefaultDesc
             // 
             this.lblDefaultDesc.AutoSize = true;
             this.lblDefaultDesc.Location = new System.Drawing.Point(58, 43);
             this.lblDefaultDesc.Name = "lblDefaultDesc";
-            this.lblDefaultDesc.Size = new System.Drawing.Size(325, 13);
+            this.lblDefaultDesc.Size = new System.Drawing.Size(354, 13);
             this.lblDefaultDesc.TabIndex = 3;
-            this.lblDefaultDesc.Text = "This will be used as the fallback browser if no rules exist for the url";
+            this.lblDefaultDesc.Text = "URL에 대한 규칙이 없을경우 이 대비용 웹 브라우저를 사용하게 됩니다.";
             // 
             // chkUseDefault
             // 
             this.chkUseDefault.AutoSize = true;
             this.chkUseDefault.Location = new System.Drawing.Point(197, 18);
             this.chkUseDefault.Name = "chkUseDefault";
-            this.chkUseDefault.Size = new System.Drawing.Size(224, 17);
+            this.chkUseDefault.Size = new System.Drawing.Size(330, 17);
             this.chkUseDefault.TabIndex = 2;
-            this.chkUseDefault.Text = "Use this browser for all Urls (ignore rules)";
+            this.chkUseDefault.Text = "모든 URL에 대해서 이 웹 브라우저를 사용 (규칙을 무시합니다)";
             this.chkUseDefault.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
@@ -203,14 +164,14 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "&File";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.fileToolStripMenuItem.Text = "&적용";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem.Text = "&Exit";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Text = "&적용하고 끝내기";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
@@ -221,34 +182,49 @@
             this.toolStripMenuItem1,
             this.setAsDefaultBrowserToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.toolsToolStripMenuItem.Text = "&Tools";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.toolsToolStripMenuItem.Text = "&도구";
             // 
             // registerBrowserToolStripMenuItem
             // 
             this.registerBrowserToolStripMenuItem.Name = "registerBrowserToolStripMenuItem";
-            this.registerBrowserToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.registerBrowserToolStripMenuItem.Text = "&Register Browser";
+            this.registerBrowserToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.registerBrowserToolStripMenuItem.Text = "&기본 웹 브라우저 목록에 등록";
             this.registerBrowserToolStripMenuItem.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // unregisterBrowserToolStripMenuItem
             // 
             this.unregisterBrowserToolStripMenuItem.Name = "unregisterBrowserToolStripMenuItem";
-            this.unregisterBrowserToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.unregisterBrowserToolStripMenuItem.Text = "&Unregister Browser";
+            this.unregisterBrowserToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.unregisterBrowserToolStripMenuItem.Text = "&기본 웹 브라우저 목록에 등록 해제";
             this.unregisterBrowserToolStripMenuItem.Click += new System.EventHandler(this.btnUnregister_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(187, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(259, 6);
             // 
             // setAsDefaultBrowserToolStripMenuItem
             // 
             this.setAsDefaultBrowserToolStripMenuItem.Name = "setAsDefaultBrowserToolStripMenuItem";
-            this.setAsDefaultBrowserToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.setAsDefaultBrowserToolStripMenuItem.Text = "Set as &Default Browser";
+            this.setAsDefaultBrowserToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.setAsDefaultBrowserToolStripMenuItem.Text = "기본 앱에서 웹 브라우저 설정하기";
             this.setAsDefaultBrowserToolStripMenuItem.Click += new System.EventHandler(this.btnDefault_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.helpToolStripMenuItem.Text = "&도움말";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Text = "&개발자";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // grpDefaultsSection
             // 
@@ -262,7 +238,7 @@
             this.grpDefaultsSection.Size = new System.Drawing.Size(708, 64);
             this.grpDefaultsSection.TabIndex = 2;
             this.grpDefaultsSection.TabStop = false;
-            this.grpDefaultsSection.Text = "Default Settings";
+            this.grpDefaultsSection.Text = "기본 설정";
             // 
             // cboDefaultBrowser
             // 
@@ -298,7 +274,7 @@
             this.grpRulesSection.Size = new System.Drawing.Size(708, 376);
             this.grpRulesSection.TabIndex = 3;
             this.grpRulesSection.TabStop = false;
-            this.grpRulesSection.Text = "Rules";
+            this.grpRulesSection.Text = "규칙 - 규칙은 이 프로그램을 끝내야 저장, 적용됩니다.";
             // 
             // cboBrowser
             // 
@@ -367,20 +343,44 @@
             this.btnAddUrl.UseVisualStyleBackColor = true;
             this.btnAddUrl.Click += new System.EventHandler(this.btnAddUrl_Click);
             // 
-            // helpToolStripMenuItem
+            // colSerial
             // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "&Help";
+            this.colSerial.HeaderText = "#";
+            this.colSerial.Name = "colSerial";
+            this.colSerial.ReadOnly = true;
+            this.colSerial.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colSerial.Width = 30;
             // 
-            // aboutToolStripMenuItem
+            // colMatchType
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aboutToolStripMenuItem.Text = "&About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.colMatchType.HeaderText = "규칙";
+            this.colMatchType.Name = "colMatchType";
+            this.colMatchType.ReadOnly = true;
+            this.colMatchType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colMatchType.Width = 85;
+            // 
+            // colUrl
+            // 
+            this.colUrl.HeaderText = "URL";
+            this.colUrl.Name = "colUrl";
+            this.colUrl.ReadOnly = true;
+            this.colUrl.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colUrl.Width = 360;
+            // 
+            // colBrowserImage
+            // 
+            this.colBrowserImage.HeaderText = "";
+            this.colBrowserImage.Name = "colBrowserImage";
+            this.colBrowserImage.ReadOnly = true;
+            this.colBrowserImage.Width = 24;
+            // 
+            // colBrowser
+            // 
+            this.colBrowser.HeaderText = "웹 브라우저";
+            this.colBrowser.Name = "colBrowser";
+            this.colBrowser.ReadOnly = true;
+            this.colBrowser.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colBrowser.Width = 150;
             // 
             // MainForm
             // 
@@ -395,7 +395,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "Browser Selector";
+            this.Text = "BrowserSelector";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
@@ -433,17 +433,17 @@
         private System.Windows.Forms.GroupBox grpDefaultsSection;
         private System.Windows.Forms.GroupBox grpRulesSection;
         private System.Windows.Forms.ComboBox cboMatchType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSerial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMatchType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colUrl;
-        private System.Windows.Forms.DataGridViewImageColumn colBrowserImage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBrowser;
         private System.Windows.Forms.ImageList imlButtons;
         private System.Windows.Forms.ImageList imlBrowsers;
         private ImageComboBox.ImageComboBox cboDefaultBrowser;
         private ImageComboBox.ImageComboBox cboBrowser;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSerial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMatchType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colUrl;
+        private System.Windows.Forms.DataGridViewImageColumn colBrowserImage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBrowser;
     }
 }
 

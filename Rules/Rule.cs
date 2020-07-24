@@ -111,4 +111,20 @@ namespace BrowserSelector {
         Wildcard,
         Regex
     }
+    internal enum MatchTypeKor
+    {
+        포함,
+        시작,
+        정확히일치,
+        와일드카드,
+        정규식
+    }
+    public static class MatchTypeClass
+    {
+        public static readonly string Contains = "포함";
+        public static readonly string StartsWith = "시작";
+        public static readonly string ExactMatch = "정확히 일치";
+        public static readonly string Wildcard = "와일드카드";
+        public static readonly string Regex = "정규식";
+    }
 }

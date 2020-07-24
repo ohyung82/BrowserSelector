@@ -133,7 +133,7 @@ namespace BrowserSelector.Core
 
 		static void PropertiesPropertyChanged(object sender, PropertyChangedEventArgs e)
 		{
-            PropertyChanged?.Invoke(null, e);
+            PropertyChanged.Invoke(null, e);
         }
 	}
 

@@ -130,7 +130,7 @@ namespace BrowserSelector {
                             var objAppId = urlAssocKey.GetValue("http");
                             if (objAppId != null) {
                                 string appId = Convert.ToString(objAppId);
-                                if (appId != null && appId != AppId) { //Exclude Browser Selector
+                                if (appId != null && appId != AppId) { //Exclude BrowserSelector
                                     if (browsers.Count(b => b.AppId.Equals(appId, StringComparison.OrdinalIgnoreCase)) == 0) { //If not already added
                                         Browser browser = GetBrowserInfo(appId);
                                         if (browser != null) {

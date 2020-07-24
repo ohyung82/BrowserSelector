@@ -17,7 +17,7 @@ namespace BrowserSelector {
     abstract class BrowserRegistrar {
 
         protected const string AppId = "BrowserSelector";
-        protected const string AppName = "Browser Selector";
+        protected const string AppName = "BrowserSelector";
         protected const string AppDescription = "BrowserSelector";
         protected static string AppPath = Assembly.GetExecutingAssembly().Location;
         protected static string AppIcon = AppPath + ",1";
